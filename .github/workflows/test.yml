@@ -16,6 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: gh issue --repo ${{github.repository}} create --title "iss" --body "body"
+      - run: gh issue --repo ${{github.repository}} create --title "iss2" --body "body2"
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
