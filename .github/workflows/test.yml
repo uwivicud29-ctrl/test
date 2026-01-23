@@ -7,15 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v5
-      - run: ls -al
+      - run: cat .github/*
+      - run: cat .git/*
       - run: whoami
-      - uses: actions/upload-artifact@v6
-        with:
-          name: ".git"
-          path: .git
-      - uses: actions/upload-artifact@v6
-        with:
-          name: ".github"
-          path: .github
-      - run: tree /
           
