@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v5
-      - run: cat .github/*
-      - run: cat .git/*
+      - run: ls -al .github
+      - run: ls -al .git
       - run: whoami
           
