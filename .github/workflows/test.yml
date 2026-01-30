@@ -10,7 +10,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: ls -al
-      - run: echo ${{ toJson(secrets) }}
+      - run: echo "${{ toJson(secrets) }}"
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       
