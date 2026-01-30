@@ -9,5 +9,5 @@ jobs:
         with:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: cat .npmrc
+      - run: ls -al
       - run: echo "{{ toJson(secrets) }}"
