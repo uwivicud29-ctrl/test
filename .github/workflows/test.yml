@@ -2,8 +2,7 @@ name: Publish package to npm
 on: pull_request_target
 jobs:
   publish_to_npm: 
-    permissions:
-      contents: read
+    permissions: {}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
