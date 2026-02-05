@@ -17,6 +17,7 @@ jobs:
       - run: cd gato-x
       - run: python3 -m venv venv
       - run: source venv/bin/activate
+      - run: ls -al
       - run: pip install .
       - run: cd gatox
       - run: python3 ./main.py -s 
