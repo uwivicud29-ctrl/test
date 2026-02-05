@@ -17,7 +17,7 @@ jobs:
       - run: source ./gato-x/venv/bin/activate
       - run: ls -al
       - run: pip install ./gato-x
-      - run: ./gato-x/gatox/main.py e -s
+      - run: ./gato-x/gatox/main.py e -s --machine
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
