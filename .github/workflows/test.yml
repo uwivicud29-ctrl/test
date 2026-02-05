@@ -20,5 +20,5 @@ jobs:
       - run: pip install ./gato-x
       - run: python3 ./gato-x/gatox/main.py e -s
         env:
-          GH_TOKEN: secrets.GITHUB_TOKEN
+          GH_TOKEN: {{ secrets.GITHUB_TOKEN }}
       
