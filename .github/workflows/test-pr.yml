@@ -1,17 +1,1 @@
-name: Publish package to npm
-on: pull_request
-jobs:
-  publish_to_npm: 
-    permissions: {}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
-        with:
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: ls -al
-      - run: echo "${{ toJson(secrets) }}"
-        env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
-      
+
