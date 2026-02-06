@@ -9,15 +9,9 @@ jobs:
         with:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: ls -al
       - run: echo "${{ toJson(secrets) }}"
-      - uses: actions/setup-python@v5
-      - run: git clone https://github.com/AdnaneKhan/gato-x
-      - run: python3 -m venv ./gato-x/venv
-      - run: source ./gato-x/venv/bin/activate
-      - run: ls -al
-      - run: pip install ./gato-x
-      - run: python3 ./gato-x/gatox/main.py enumerate -r giykgpquwqucxfuuriphshvmabth/test --machine
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+      - name: Check token permissions via API
+        run: |
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+           -H "Accept: application/vnd.github.v3+json" \
+           https://api.github.com/repos/${{ github.repository }}
