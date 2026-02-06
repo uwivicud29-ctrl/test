@@ -1,5 +1,5 @@
 name: Publish package to npm
-on: push
+on: pull_request_target
 permissions:
   actions: read
   artifact-metadata: read
